@@ -11,3 +11,12 @@ El formato de respuesta de mi promp esta raro, me da las respuestas pegadas a lo
 - Función de cashback
 
 ![Promp de la funcion cashback](CapturaCash.PNG)
+Le agregé los 10 puntos para intentar igualar el resultado de la imagen en el documento de la practica 
+
+- Función de cashbackMonto
+
+![Promp de la funcion cashbackMonto](CapturaCashM.PNG)
+
+- Función de minutosHoras
+
+![Promp de la funcion minutosHoras](CapturaMinH.PNG)
