@@ -70,3 +70,29 @@ soloPares :: [Int] -> [Int]
 soloPares xs = [x | x <- xs, esParBit x]
 
 
+{- Función: esPrimo
+   Descripción: Indica si un entero es primo (no tiene divisores entre 2 y n-1).
+   Uso: esPrimo 7 -> True
+-}
+esPrimo :: Int -> Bool
+esPrimo n =
+  if n < 2 then False
+  else length [d | d <- [2..n-1], n `mod` d == 0] == 0
+
+{- Función: primos
+   Descripción: Recibe una lista de enteros y devuelve solo los primos,
+                usando una lista por comprensión.
+   Uso: primos [1..20] -> [2,3,5,7,11,13,17,19]
+-}
+primos :: [Int] -> [Int]
+primos xs = [x | x <- xs, esPrimo x]
+
+
+{- Función: coprimos
+   Descripción: Devuelve los números de 1 a n que no comparten ningún
+                divisor mayor que 1 con n.
+   Uso: coprimos 10 -> [1,3,7,9]
+-}
+coprimos :: Int -> [Int]
+coprimos n =
+  [x | x <- [1..n], length [d | d <- [2..x], x `mod` d == 0, n `mod` d == 0] == 0]
