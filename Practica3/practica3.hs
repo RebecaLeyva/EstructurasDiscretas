@@ -1,3 +1,6 @@
+import EsParBit (esParBit)
+
+
 data Plazo = Dias Double | Meses Double
 
 {- Función: diasDePlazo
@@ -33,6 +36,7 @@ cetes :: Double -> Plazo -> Double
 cetes vi plazo = vi * (1 + tasaAnual t * t / 360)
   where t = diasDePlazo plazo
 
+
 {- Función: mensajeCetes
    Descripción: Devuelve un mensaje con el plazo, el rendimiento bruto y el
                 monto total de la inversión.
@@ -46,4 +50,23 @@ mensajeCetes vi plazo =
   where
     k = cetes vi plazo
     m = k - vi
+
+
+{- Función: negativos
+   Descripción: Recibe una lista de números y cuenta cuántos son negativos,
+                usando una lista por comprensión.
+   Uso: negativos [-1, 2, 4, 6, -4] -> 2
+-}
+negativos :: [Int] -> Int
+negativos xs = length [x | x <- xs, x < 0]
+
+
+{- Función: soloPares
+   Descripción: Recibe una lista de enteros y devuelve únicamente los
+                números pares, usando esParBit (importada del módulo EsParBit).
+   Uso: soloPares [1,2,3,4] -> [2,4]
+-}
+soloPares :: [Int] -> [Int]
+soloPares xs = [x | x <- xs, esParBit x]
+
 
