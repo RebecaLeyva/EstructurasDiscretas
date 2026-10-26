@@ -1,0 +1,4 @@
+# Practica 4
+
+### La chivita Recursiva
+Utilizando esta canción, podemos explicar la recursividad de la siguiente manera: el caso base se alcanza con Plim Plim, quien sí acepta sacar al animal anterior. El problema inicia con la chiva, la cual no quiere salir de su lugar. Para resolver esto, se realiza una llamada recursiva convocando a otro animal (como el burro, luego el ratón, el gato, etc.) para que saque al anterior, pero cada uno se niega y delega la tarea en el siguiente. Este proceso de acumulación de llamadas continúa hasta llegar a Plim Plim (el caso base). Una vez que Plim Plim acepta la tarea, se desencadena el proceso inverso: cada animal accede finalmente a sacar al que le corresponde en cadena, logrando al fin que la chivita salga de ese lugar.
